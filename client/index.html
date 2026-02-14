@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto AI Analyzer</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;500;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="main-layout">
+
+    <div class="top-section">
+
+      <header>
+        <h1>Crypto AI Analyzer <span class="neon">AI</span></h1>
+        <p class="subtitle">
+          Управляй будущим криптовалют с помощью искусственного интеллекта
+        </p>
+      </header>
+
+      <form class="analyze-form">
+        <div class="dropdown">
+          <input id="exchange" type="text" class="dropdown-input"
+                 placeholder="Выберите биржу" autocomplete="off" />
+          <div id="exchange-dropdown" class="dropdown-list"></div>
+        </div>
+
+        <div class="dropdown">
+          <input id="symbol" type="text" class="dropdown-input"
+                 placeholder="Выберите монету"
+                 autocomplete="off" disabled />
+          <div id="symbol-dropdown" class="dropdown-list"></div>
+        </div>
+
+        <button id="analyze-btn" type="button" class="neon-btn">
+          Запустить анализ
+        </button>
+      </form>
+
+      <div class="info-cards">
+
+        <div class="card">
+          <span>Цена</span>
+          <b id="price">—</b>
+        </div>
+
+        <div class="card">
+          <span>Максимальная просадка</span>
+          <b id="drawdown">—</b>
+        </div>
+
+        <div class="card">
+          <span>Волатильность за день</span>
+          <b id="vol-day">—</b>
+        </div>
+
+        <div class="card">
+          <span>Волатильность за неделю</span>
+          <b id="vol-week">—</b>
+        </div>
+
+        <div class="card">
+          <span>Волатильность за месяц</span>
+          <b id="vol-month">—</b>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="charts-section">
+
+      <div class="chart-box">
+        <canvas id="priceChart"></canvas>
+      </div>
+
+      <div class="chart-box">
+        <canvas id="volChart"></canvas>
+      </div>
+
+    </div>
+
+    <div class="ai-section">
+      <div class="ai-box" id="aiAnalysis">
+        Ждем анализа...
+      </div>
+    </div>
+
+  </div>
+
+  <div id="loader" class="loader"></div>
+  <div id="notification" class="notification"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="app.js"></script>
+
+</body>
+</html>

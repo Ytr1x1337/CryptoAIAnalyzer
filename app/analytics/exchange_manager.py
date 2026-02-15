@@ -1,11 +1,9 @@
 import ccxt
-from threading import Lock
 
 class ExchangeManager:
     def __init__(self):
         self.exchanges = {}
         self.markets_cache = {}
-        self.lock = Lock()
 
         self.supported = [
     "binance",
@@ -52,5 +50,6 @@ class ExchangeManager:
         ]
 
         return sorted(usdt_pairs)
+
 
 

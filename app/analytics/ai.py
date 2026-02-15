@@ -30,6 +30,7 @@ class AIService:
                 Недельная волатильность: {data.get("volatility_week")}%
                 Месячная волатильность: {data.get("volatility_month")}%
                 Максимальная просадка: {data.get("max_drawdown")}%
+                Цены за последние 30 дней: {data.get("chart_prices")}%
 
                 Ответ дай кратко и профессионально. Не более 4 предложений.
                 """
@@ -57,3 +58,4 @@ class AIService:
         except Exception as e:
             print("AI ERROR:", e)
             return "AI-анализ временно недоступен."
+

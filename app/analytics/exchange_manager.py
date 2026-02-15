@@ -38,9 +38,11 @@ class ExchangeManager:
                 self.exchanges[exchange_id] = exchange
 
             except Exception as e:
-                print(f"[Init Error] {exchange_id}: {e}")
+                raise RuntimeError(
+                    f"Failed to initialize exchange '{exchange_id}'"
+                ) from e
 
-
+    
     def get_exchanges(self) -> List[str]:
         return list(self.exchanges.keys())
 
@@ -87,6 +89,7 @@ class ExchangeManager:
         ]
 
         return sorted(usdt_pairs)
+
 
 
 

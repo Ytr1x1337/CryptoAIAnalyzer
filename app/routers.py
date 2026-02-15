@@ -68,7 +68,8 @@ def analyze_market(exchange: str, symbol: str,):
             "volatility_day": vol_day,
             "volatility_week": vol_week,
             "volatility_month": vol_month,
-            "max_drawdown": max_drawdown
+            "max_drawdown": max_drawdown,
+            "chart_prices": [c[4] for c in ohlcv_30d]
         })
 
 
@@ -86,4 +87,5 @@ def analyze_market(exchange: str, symbol: str,):
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
 

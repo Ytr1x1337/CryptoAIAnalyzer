@@ -6,7 +6,7 @@ services:
   nginx: nginx:stable-alpine
   ports:
     - "80:80"
-  volume:
+  volumes:
     - "./nginx.conf:/etc/nginx/nginx.conf"
   depends_on:
   - backend

@@ -11,7 +11,7 @@ import { initAnalysis } from "./analysis.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const API_BASE = "http://127.0.0.1:8000/crypto";
+    const API_BASE = "http://87.228.8.46/crypto";
 
     const exchangeInput = document.getElementById("exchange");
     const exchangeDropdown = document.getElementById("exchange-dropdown");

@@ -1,6 +1,6 @@
 import { safeFetch, showLoader, hideLoader, showNotification } from "./utils.js";
 
-const API_BASE = "http://127.0.0.1:8000/crypto";
+const API_BASE = "http://87.228.8.46/crypto";
 
 let priceChart = null;
 let volChart = null;

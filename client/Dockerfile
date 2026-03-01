@@ -1,7 +1,7 @@
 FROM node:alpine as build
 
 COPY . .
-RUN npm build
+RUN npm run build
 
 FROM nginx:stable-alpine
 

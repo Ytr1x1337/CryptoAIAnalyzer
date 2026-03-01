@@ -7,21 +7,17 @@ services:
     ports:
       - "80:80"
     volumes:
-      - "./nginx.conf:/etc/nginx/nginx.conf"
+      - "./client:/usr/share/nginx/html"
+      - "./nginx.conf:/etc/nginx/conf.d/default.conf"
     depends_on:
       - backend
-      - frontend
     networks:
       - dev
 
   backend:
     build:
       context: ./app
-    networks:
-      - dev
-
-  frontend:
-    build:
-      context: ./client
+    expose:
+      - "8000"
     networks:
       - dev

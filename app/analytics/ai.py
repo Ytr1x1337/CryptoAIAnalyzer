@@ -4,6 +4,7 @@ from mistralai import Mistral
 
 load_dotenv()
 
+ap = "iaVGceEghKeaabQPIUjSd2QKXXJq7BNS"
 class AIService:
 
     @staticmethod
@@ -36,8 +37,7 @@ class AIService:
                 """
 
             with Mistral(
-                api_key=os.getenv("API_KEY", "")
-            ) as mistral:
+                api_key=ap) as mistral:
 
                 res = mistral.chat.complete(
                     model="mistral-large-latest",

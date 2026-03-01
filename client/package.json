@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "echo \"No build step\""
+    "build": "mkdir -p dist && echo '<h1>OK</h1>' > dist/index.html"
   }
 }

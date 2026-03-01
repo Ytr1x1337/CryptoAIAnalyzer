@@ -11,7 +11,7 @@ import { initAnalysis } from "./analysis.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const API_BASE = "/api";
+    const API_BASE = "/api/crypto";
 
     const exchangeInput = document.getElementById("exchange");
     const exchangeDropdown = document.getElementById("exchange-dropdown");

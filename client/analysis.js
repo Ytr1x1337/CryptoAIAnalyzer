@@ -1,6 +1,6 @@
 import { safeFetch, showLoader, hideLoader, showNotification } from "./utils.js";
 
-const API_BASE = "/api";
+const API_BASE = "/api/crypto";
 
 let priceChart = null;
 let volChart = null;

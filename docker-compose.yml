@@ -18,12 +18,12 @@ services:
 
   backend:
     build:
-      context: ./backend
+      context: ./app
     networks:
       - dev
 
   frontend:
     build:
-      context: ./frontend
+      context: ./client
     networks:
       - dev

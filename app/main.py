@@ -9,7 +9,8 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
     "http://127.0.0.1:5500",
-    "http://87.228.8.46"
+    "http://87.228.8.46",
+    "http://87.228.33.149"
 ], 
     allow_credentials=True,
     allow_methods=["*"],

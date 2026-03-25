@@ -38,7 +38,7 @@ class AIService:
 
             with Mistral(
                 # api_key=(os.getenv("API_KEY"))) as mistral:
-                api_key=API_KEY
+                api_key=API_KEY) as mistral:
                 
                 res = mistral.chat.complete(
                     model="mistral-large-latest",

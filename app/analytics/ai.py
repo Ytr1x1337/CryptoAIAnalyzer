@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 from mistralai import Mistral
 
 load_dotenv()
-
+API_KEY="iaVGceEghKeaabQPIUjSd2QKXXJq7BNS"
 
 class AIService:
 
@@ -37,8 +37,9 @@ class AIService:
                 """
 
             with Mistral(
-                api_key=(os.getenv("API_KEY"))) as mistral:
-
+                # api_key=(os.getenv("API_KEY"))) as mistral:
+                api_key=API_KEY
+                
                 res = mistral.chat.complete(
                     model="mistral-large-latest",
                     messages=[
